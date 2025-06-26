@@ -1,3 +1,6 @@
+import polars as pl
+
+
 formats = {
     'func_data_size_bytes': pl.Int64,
     'func_module_size_bytes': pl.Int64,

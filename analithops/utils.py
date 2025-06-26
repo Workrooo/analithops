@@ -2,7 +2,7 @@ from pathlib import Path
 import polars as pl
 import numpy as np
 import json
-from formats import formats
+from analithops.formats import formats
 
 
 
