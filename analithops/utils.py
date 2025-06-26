@@ -67,7 +67,7 @@ def data_input(data_path, forbidden=(), map_reduce=True) -> pl.DataFrame:
     return pl.DataFrame(full, schema=formats)
 
 
-def compute_mean_runtime_per_nlambdas(df: pl->DataFrame) -> pl.DataFrame:
+def compute_mean_runtime_per_nlambdas(df: pl.DataFrame) -> pl.DataFrame:
     """
     Compute the mean execution time per number of lambdas from a task result DataFrame.
 
