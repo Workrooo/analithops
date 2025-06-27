@@ -2,11 +2,12 @@ from pathlib import Path
 import polars as pl
 import numpy as np
 import json
+
 from analithops.formats import formats
 
 
 
-def future_dumps(futures: list[lithops.future.ResponseFuture]):
+def future_dumps(futures: list['lithops.future.ResponseFuture']):
     """
     Convert a list of Lithops ResponseFuture objects into a formatted string of their stats.
 
@@ -53,7 +54,7 @@ def data_input(data_path, forbidden=(), map_reduce=True) -> pl.DataFrame:
         name = str(path.name)
         if name in forbidden:
             continue
-        for i, fpath in enumerate(path.glob(r'**/output-*.jsonl')):
+        for i, fpath in enumerate(path.glob(r'**/*.jsonl')):
             with open(fpath) as f:
                 for line in f.readlines():
                     full.append({
